@@ -1,31 +1,30 @@
-git
+# Cloning a Repository
+git clone https://github.com/control-systems/repo.git
 
-echo "# CCA" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/CCA.git
-git push -u origin main
+# Creating a New Branch for a Feature
+git checkout -b pid-controller
 
-git clone https://github.com/CCA.git
+# Making Changes and Committing
+git add .
+git commit -m "Implemented basic PID controller"
 
-git fetch --all
+# Pushing the New Branch to Remote Repository
+git push origin pid-controller
 
-git branch a1
+# Fetching Updates from Remote
+git fetch origin
 
-git branch 
-
-git log
-
-git remote -v
-
-git branch -M a1
-
-git checkout -b a2
-
+# Pulling Updates from Main Branch
 git pull origin main
 
-git branch -d a1
+# Switching Back to Main Branch
+git checkout main
 
-git reset --soft
+# Resetting the Current Branch to a Previous Commit
+git reset --hard HEAD~1
+
+# Deleting an Old Branch
+git branch -d old-feature-branch
+
+
+app engine admin api
